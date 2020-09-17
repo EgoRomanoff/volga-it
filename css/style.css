@@ -1,0 +1,576 @@
+/* Подключение шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@font-face {
+	font-family: "OpiumNewC";
+ 	src: url('../fonts/OpiumNewC.otf') format("opentype");
+}
+
+/*-----Нормализация-----*/
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+html, body {
+    height: 100vh;
+    width: 100vw;
+}
+button {
+	cursor: url(../images/cursor.png), pointer;
+	outline: none;
+}
+main {
+    height: 100vh;
+    overflow: hidden;
+}
+/*----------*/
+/*-----Старотовый экран-----*/
+.start-screen {
+    position: fixed;
+	background: url(../images/start.png) center no-repeat;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+	-webkit-transition: transform 1s ease-in-out;
+	-moz-transition: transform 1s ease-in-out;
+	-ms-transition: transform 1s ease-in-out;
+	-o-transition: transform 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+}
+/*----------*/
+/* -----Шапка----- */
+.header {
+    position: fixed;
+	display: flex;
+    justify-content: space-between;
+    padding: 2.6vh 2.6vw;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+.button-menu {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: url(../images/button_menu.png) center no-repeat;
+	background-color: white;
+}
+.logo {
+	width: 9.7vw;
+	height: 6.2vh;
+	background: center/contain no-repeat;
+	background-image: url(../images/logo_white.png);
+	-webkit-transition: background-image 0.2s linear 0.35s;
+	-moz-transition: background-image 0.2s linear 0.35s;
+	-ms-transition: background-image 0.2s linear 0.35s;
+	-o-transition: background-image 0.2s linear 0.35s;
+	transition: background-image 0.2s linear 0.35s;
+}
+.button-lang {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background-color: white;
+	font-family: 'OpiumNewC', serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+.button-menu:hover, .button-lang:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+/*----------*/
+/* -----Меню----- */
+.menu {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background-color: white;
+	top: 0;
+	left: 0;
+	width: 57vw;
+	height: 100vh;
+	z-index: 2;
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
+	-webkit-transition: transform 1s ease-in-out;
+	-moz-transition: transform 1s ease-in-out;
+	-ms-transition: transform 1s ease-in-out;
+	-o-transition: transform 1s ease-in-out;
+	transition: transform 1s ease-in-out;
+}
+.menu h3 {
+	color: #202020;
+	font-family: 'Playfair Display', serif;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 100%;
+}
+.menu ul {
+	list-style-type: none;
+}
+.close-button {
+    position: fixed;
+	width: 50px;
+	height: 50px;
+	top: 2.6vh;
+	left: 2.6vw;
+	border-radius: 100%;
+	background: url(../images/icon_close.png) center no-repeat;
+	background-color: white;
+}
+.menu-block, .contacts-block {
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+	opacity: 0;
+	margin: 50px;
+}
+.menu-block {
+    margin-right: 8.6vw;
+}
+.top-menu {
+	margin-bottom: 11.7vh;
+}
+.top-menu li {
+	margin-bottom: 2.55vh;
+}
+.top-menu a {
+	color: #202020;
+	font-family: 'Playfair Display', serif;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 100%;
+	text-decoration: none;
+	cursor: url(../images/cursor.png), pointer;
+}
+.top-menu a:hover {
+	color: #024B1D;
+}
+.bottom-menu li {
+	margin-top: 2.04vh;
+}
+.bottom-menu a {
+	text-decoration: none;
+	color: #202020;
+	font-family: 'Ubuntu', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.63vh;
+	text-transform: capitalize;
+	cursor: url(../images/cursor.png), pointer;
+}
+.bottom-menu a:hover {
+	color: #E5CE90;
+}
+.contacts-block h3 {
+	margin-bottom: 4.08vh;
+}
+.address, .contacts{
+	color: #202020;
+	font-family: 'Ubuntu', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: capitalize;
+	margin-bottom: 7.14vh;
+}
+.contacts {
+	line-height: 30px;
+}
+.contacts-block h4 {
+	color: #202020;
+	font-family: 'Playfair Display', serif;
+	font-weight: normal;
+	font-size: 19px;
+	line-height: 25px;
+	margin-bottom: 2.04vh;
+}
+.social-buttons {
+	display: flex;
+}
+.button-twitter, .button-inst, .button-vk {
+	background-color: white;
+	width: 50px;
+	height: 50px;
+	border: 3px solid #066035;
+	border-radius: 100%;
+	margin-right: 25px;
+}
+.button-twitter {
+	background: url(../images/button_twitter.png) center no-repeat;
+}
+.button-inst {
+	background: url(../images/button_inst.png) center no-repeat;
+}
+.button-vk {
+	background: url(../images/button_vk.png) center no-repeat;
+}
+.button-twitter:hover {
+	background: url(../images/button_twitter_hover.png) center no-repeat,
+				linear-gradient(180deg, #066035 0%, #074627 100%);
+	border-width: 0;
+}
+.button-inst:hover {
+	background: url(../images/button_inst_hover.png) center no-repeat,
+				linear-gradient(180deg, #066035 0%, #074627 100%);
+	border-width: 0;
+}
+.button-vk:hover {
+	background: url(../images/button_vk_hover.png) center no-repeat,
+				linear-gradient(180deg, #066035 0%, #074627 100%);
+	border-width: 0;
+}
+/*----------*/
+/*-----Основной контент-----*/
+.main-wrapper {
+	position: relative;
+    width: 100vw;
+    height: 100vh;
+    left: 0%;
+	-webkit-transition: left 1.5s;
+	-moz-transition: left 1.5s;
+	-ms-transition: left 1.5s;
+	-o-transition: left 1.5s;
+	transition: left 1.5s;
+}
+/* Общие настройки для кажой из страниц */
+.container {
+	position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+/*------*/
+/* Общие стили для блоков с фоном */
+.background, .videoscreen {
+    position: absolute;
+	z-index: -1;
+	overflow: hidden;
+}
+.back-zoom, .videoplay {
+	width: 100%;
+	height: 100%;
+	background: center/cover no-repeat;
+}
+
+.leaves {
+	width: 100%;
+	height: 100%;
+	background: center/contain no-repeat;
+}
+/*------*/
+/* Общие стили для блоков с текстом*/
+.title {
+	position: absolute;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.84vh;
+	line-height: 167%;
+	letter-spacing: -0.2px;
+	-webkit-transform: translateX(50%);
+	-moz-transform: translateX(50%);
+	-ms-transform: translateX(50%);
+	-o-transform: translateX(50%);
+	transform: translateX(50%);
+	-webkit-transition: transform 1.2s ease-out;
+	-moz-transition: transform 1.2s ease-out;
+	-ms-transition: transform 1.2s ease-out;
+	-o-transition: transform 1.2s ease-out;
+	transition: transform 1.2s ease-out;
+}
+.title h2 {
+	font-family: 'Playfair Display', serif;
+    font-weight: normal;
+	font-style: normal;
+	font-size: 7.14vh;
+	line-height: 100%;
+}
+/*------*/
+/*---Экран 1---*/
+.back_1 {
+	width: 100%;
+	height: 100%;
+}
+.bk-img_1-1 {
+	background-image: url(../images/background_main.jpg);
+}
+.bk-img_1-2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../images/foggy_2.png) center/cover no-repeat,
+				url(../images/foggy_1.png) center/cover no-repeat;
+	-webkit-transition: opacity 1.5s ease-in-out;
+	-moz-transition: opacity 1.5s ease-in-out;
+	-ms-transition: opacity 1.5s ease-in-out;
+	-o-transition: opacity 1.5s ease-in-out;
+	transition: opacity 1.5s ease-in-out;
+	opacity: 0;
+}
+.ttl-1 {
+	position: absolute;
+    top: 29vh;
+    left: 6.5vw;
+    width: 31.8vw;
+	color: white;
+	font-family: 'OpiumNewC', serif;
+	font-size: 1.83vh;
+	font-weight: lighter;
+    line-height: 2.24vh;
+}
+.ttl-1 h1 {
+    padding-bottom: 25px;
+	font-family: 'Playfair Display', serif;
+	font-weight: normal;
+	font-size: 10.2vh;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+/*------*/
+/*-----Экран 2-----*/
+.page-2 {
+    left: 100%;
+}
+.back_2-1 {
+	left: 6.6vw;
+	top: 11.2vh;
+	height: 69.5vh;
+	width: 26.9vw;
+}
+.bk-img_2-1 {
+    background-image: url(../images/img_left.png);
+}
+.back_2-2 {
+	left: 66.5vw;
+	top: 61vh;
+	width: 30.9vw;
+	height: 39vh;
+}
+.bk-img_2-2 {
+    background-image: url(../images/img_right.png);
+}
+.back_2-3 {
+	left: 25.6vw;
+	top: 1.1vh;
+	width: 64.8vw;
+	height: 93vh;
+}
+.bk-img_2-3 {
+	background-image: url(../images/leaves_2.png);
+}
+.ttl-2 {
+    top: 24vh;
+    left: 38.5vw;
+    width: 46vw;
+}
+.ttl-2 h2 {
+    width: 54.8vw;
+    padding-bottom: 45px;
+}
+/*------*/
+/*-----Экран 3-----*/
+.page-3 {
+    left: 200%;
+}
+.back_3-1 {
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 33.5vw;
+}
+.bk-img_3-1 {
+	width: 100%;
+	height: 100%;
+	background: center/cover no-repeat;
+	background-image: url(../images/img_left_3_summer.png);
+	-webkit-transition: background-image 1.5s ease-in-out;
+	-moz-transition: background-image 1.5s ease-in-out;
+	-ms-transition: background-image 1.5s ease-in-out;
+	-o-transition: background-image 1.5s ease-in-out;
+	transition: background-image 1.5s ease-in-out;
+}
+.back_3-2 {
+	left: 62.5vw;
+	top: 0;
+	height: 38.4vh;
+	width: 30.9vw;
+}
+.bk-img_3-2 {
+	background-image: url(../images/img_right_3.png);
+}
+.back_3-3 {
+	left: 34.1vw;
+	top: 32.2vh;
+	height: 64vh;
+	width: 60.6vw;
+}
+.bk-img_3-3 {
+	background-image: url(../images/leaves_3.png);
+}
+.ttl-3 {
+    top: 49vh;
+	left: 38.5vw;
+    width: 42.9vw;
+}
+.ttl-3 h2 {
+	/*width: 42.9vw;*/
+	padding-bottom: 45px;
+}
+/*------*/
+/* -----Экран 4----- */
+.page-4 {
+    left: 300%;
+}
+.videoscreen {
+	left: 6.6vw;
+	top: 13.8vh;
+	height: 73.8vh;
+	width: 86.8vw;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+}
+.videoplay {
+	background-image: url(../images/video_4.png);
+}
+.play-button {
+	position: absolute;
+	top: 44vh;
+	left: 46vw;
+	width: 7.91vw;
+	height: 15.51vh;
+	border-radius: 100%;
+	background: url(../images/icon_play.png) center/contain no-repeat;
+	z-index: 0;
+	-webkit-transform: translateX(600%);
+	-moz-transform: translateX(600%);
+	-ms-transform: translateX(600%);
+	-o-transform: translateX(600%);
+	transform: translateX(600%);
+}
+.play-button:hover {
+	background: url(../images/icon_play_hover.png) center/contain no-repeat;
+}
+/*------*/
+/* -----Экран 5----- */
+.page-5 {
+    left: 400%;
+}
+.back_5-1 {
+	left: 0;
+	top: 0;
+	height: 87vh;
+	width: 34.4vw;
+}
+.bk-img_5-1 {
+	background-image: url(../images/img_back_5.png);
+}
+.back_5-2 {
+	left: 2.6vw;
+	top: 33vh;
+	height: 67vh;
+	width: 54.9vw;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: transform 1.5s ease-out;
+	-moz-transition: transform 1.5s ease-out;
+	-ms-transition: transform 1.5s ease-out;
+	-o-transition: transform 1.5s ease-out;
+	transition: transform 1.5s ease-out;
+}
+.bk-img_5-2 {
+	background-image: url(../images/img_collage_5.png);
+}
+.back_5-3 {
+	left: 39.6vw;
+	top: 14.2vh;
+	height: 75.7vh;
+	width: 52.6vw;
+}
+.bk-img_5-3 {
+	background-image: url(../images/leaves_5.png);
+}
+.ttl-5 {
+	position: absolute;
+	top: 23.8vh;
+	left: 50.6vw;
+	width: 46.5vw;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.84vh;
+	line-height: 167%;
+	letter-spacing: -0.2px;
+	-webkit-transform: translateX(125%);
+	-moz-transform: translateX(125%);
+	-ms-transform: translateX(125%);
+	-o-transform: translateX(125%);
+	transform: translateX(125%);
+	-webkit-transition: transform 0.9s ease-out;
+	-moz-transition: transform 0.9s ease-out;
+	-ms-transition: transform 0.9s ease-out;
+	-o-transition: transform 0.9s ease-out;
+	transition: transform 0.9s ease-out;
+}
+.move-h2 {
+	font-family: 'Playfair Display', serif;
+    font-weight: normal;
+	font-style: normal;
+	font-size: 7.14vh;
+	line-height: 100%;
+	padding-bottom: 4.6vh;
+	-webkit-transform: translateX(50%);
+	-moz-transform: translateX(50%);
+	-ms-transform: translateX(50%);
+	-o-transform: translateX(50%);
+	transform: translateX(50%);
+	-webkit-transition: transform 0.6s ease-out;
+	-moz-transition: transform 0.6s ease-out;
+	-ms-transition: transform 0.6s ease-out;
+	-o-transition: transform 0.6s ease-out;
+	transition: transform 0.6s ease-out;
+}
+.go-to-collection {
+	position: absolute;
+	left: 50.6vw;
+	top: 57.7vh;
+	width: 14vw;
+	height: 7.3vh;
+	background-color: white;
+	border: 0.4vw solid #066035;
+	color: #066035;
+    font-family: 'OpiumNewC', serif;
+    font-size: 1.83vh;
+	font-weight: bold;
+	line-height: 167%;
+	letter-spacing: -0.36px;
+	-webkit-transform: translateX(400%);
+	-moz-transform: translateX(400%);
+	-ms-transform: translateX(400%);
+	-o-transform: translateX(400%);
+	transform: translateX(400%);
+	-webkit-transition: transform 1.2s ease-out;
+	-moz-transition: transform 1.2s ease-out;
+	-ms-transition: transform 1.2s ease-out;
+	-o-transition: transform 1.2s ease-out;
+	transition: transform 1.2s ease-out;
+}
+.go-to-collection:hover {
+	border: 0;
+	color: white;
+	background: linear-gradient(180deg, #066035 0%, #074627 100%);
+}
+/*----------*/
